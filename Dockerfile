@@ -2,7 +2,7 @@
 
 ARG NODE_VERSION=18
 
-FROM node:${NODE_ENV}-alpine as base
+FROM node:${NODE_VERSION}-alpine as base
 
 WORKDIR /usr/src    
 
