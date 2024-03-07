@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${varela.className} dark:bg-gray-300 bg-gray-100`}>
         <div className="container mx-auto">
-          <nav className="flex items-center justify-between text-sm font-light px-3">
+          <nav className="flex items-center justify-between text-sm font-light px-8">
             <span className="">
               <Link href="/" >App name</Link>
             </span>
@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
         </div>
-        <div className="container px-3 mx-auto">
-          <main>
+        <div className="container mx-auto">
+          <main className="mx-12">
             {children}
           </main>
         </div>

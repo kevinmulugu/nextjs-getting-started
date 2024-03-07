@@ -1,3 +1,5 @@
+"use client"
+
 import { Login } from "@/app/ui/login"
 
 export default function Page() {
