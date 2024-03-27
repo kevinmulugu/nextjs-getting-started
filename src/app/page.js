@@ -1,6 +1,24 @@
+'use client'
+
 import { Links } from "./components/links"
 
+import { useState } from "react";
+
+
 export default function Home() {
+  const [count, setCount] = useState(0)
+
+  function MyButton({count, onClick}) {
+    return (
+      <button onClick={onClick} className="p-3 bg-gray-800 text-white rounded-lg">Click me: {count}</button>
+    )
+    
+  }
+
+  function setClick() {
+    setCount(count + 1)
+  }
+
   return (
     <section className="flex flex-col md:flex-row">
       <div className="space-y-12 md:my-12 md:w-2/3">
@@ -11,6 +29,7 @@ export default function Home() {
         social media account's direct messages
         </p>
         <a href="#" className="inline-block p-3 py-2 px-3 text-white rounded-lg bg-gray-800 hover:bg-gray-600">Manage my DM's</a>
+        <MyButton onClick={setClick} count={count} className="block" />
       </div>
       <div className="md:w-1/3"></div>
     </section>
